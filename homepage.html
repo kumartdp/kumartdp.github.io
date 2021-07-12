@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+
+
+
+
+#element
+{
+
+padding:20px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 40%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+</style>
+<script>
+
+
+function fun()
+{
+
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("btn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+
+
+  modal.style.display = "block";
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+}
+</script>
+
+
+</head>
+
+<body>
+<div class="container-fluid" >
+<div class="row">
+<div class="col-lg-4">
+
+<div class="row">
+
+<div class="col-lg-4">
+ <div class="search">
+            <form action="#">
+                <input type="text"
+                    placeholder=" Search Courses"
+                    name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4">
+  <div class="card"  >
+      <h3>Card 1</h3>
+	  <button class="btn btn-info" id="btn" onclick="fun()" >view details</button>
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+</div>
+</div>
+<div class="row">
+
+<div class="col-lg-4">
+ <div class="card" >
+      <h3>Card 2</h3>
+	  <button class="btn btn-info" id="btn"  onclick="fun()">view details</button>
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+</div>
+</div>
+
+
+<div class="row">
+ <div class="col-lg-4">
+ <div class="card">
+      <h3>Card 3</h3>
+	  <button class="btn btn-info" id="btn" onclick="fun()">view details</button>
+      <p>Some text</p>
+      <p>Some text</p>
+	  </div> 
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="col-lg-8">
+<div class="row">
+<form class="example" action="#">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<div class="col-lg-4" id="element">
+<img src="./download.jpeg">
+</div>
+<div class="col-lg-4" id="element">
+<img src="./download.jpeg">
+</div>
+<div class="col-lg-4" id="element">
+<img src="./download.jpeg">
+</div>
+<div class="col-lg-4" id="element">
+<img src="./download.jpeg">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	<table>
+	<tbody>
+	<th>item</th>
+	<th>price</th>
+	<tr>
+	<td>1</td>
+	<td>2</td>
+	</tr>
+	<tr>
+	<td>3</td>
+	<td>4</td>
+	</tr>
+	
+	
+	
+	
+	</tbody>
+	</table>
+
+</div>
+</body>
+
+
